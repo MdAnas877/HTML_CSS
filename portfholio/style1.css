@@ -1,0 +1,37 @@
+
+.main{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.computer{
+    width: 70%;
+}
+
+.about-me{
+    padding-top: 150px;
+    padding-bottom: 300px;
+    text-align: center;
+    color: aliceblue;
+    background-color: #6E07F3;
+}
+
+.about-me h3{
+    font: message-box;
+    font-size: 18px;
+}
+.skills{
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 300px;
+    margin-top: -200px;
+    margin-right: 80px;
+    margin-left: 80px;
+    border-radius: 10px;
+}
+
+.skills-img{
+    padding: 140px;
+    width: 100px;
+}
