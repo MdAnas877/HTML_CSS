@@ -1,0 +1,160 @@
+.header-name {
+    font-size: 30px;
+    margin-left: 57%;
+    color: antiquewhite;
+}
+
+th {
+    padding: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.parrent-about {
+    display: flex;
+    margin-top: 4%;
+    color: antiquewhite;
+
+}
+
+.me {
+    margin-left: 5%;
+}
+
+img {
+    width: 500px;
+    height: 450px;
+    margin-left: 36%;
+    border-radius: 100%;
+}
+
+body {
+    background-color: #000;
+}
+
+#read-more{
+    color: orange;
+}
+
+.me h1 {
+    font-size: 50px;
+}
+
+.media img {
+    width: 60px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left:  10px;
+}
+.media{
+    margin-left: 60px;
+
+}
+#linkedin {
+    width: 60px;
+    height: 50px;
+}
+
+#gmail {
+    width: 60px;
+    height: 50px;
+}
+
+#instagram {
+    width: 60px;
+    height: 50px;
+}
+
+.about h1{
+    color: aliceblue;
+    font-size: 50px;
+    margin-left: 70px;
+}
+
+.about h2{
+    color: aliceblue;
+    font-size: 30px;
+    margin-left: 70px;
+    font-weight: bold;
+}
+
+.technical{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+.technical img{
+    width: 150px;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin: 70px;
+}
+
+.skills{
+    height: 150px;
+    width: 170px;
+}
+
+.skills09{
+    width: 150px !important;
+    height: 100px;
+}
+.talk{
+    color: aliceblue;
+    text-align: center;
+}
+
+.talk h1{
+    font-size: 70px;
+}
+
+.talk h2{
+    font-size: 40px;
+}
+
+.form-control{
+    padding: 10px;
+    margin: 20px;
+    size: 30px;
+    width: 400px;
+    border-radius: 8px;
+
+}
+#button{
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    font : 900;
+}
+
+h1{
+    text-align: center;
+    color:aliceblue;
+}
+span{
+    color: orange;
+}
+label{
+    font-size: 25px;
+}
+
+.technical1{
+    color: orange;
+}
+/* .about h2{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+} */
+.myClass{
+    color: red;
+}
+.hell{
+    
+}
