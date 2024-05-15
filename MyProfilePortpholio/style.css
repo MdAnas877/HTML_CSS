@@ -132,6 +132,8 @@ body {
     height: 30px;
     border-radius: 4px;
     font : 900;
+    font-weight: bold;
+    color: white;
 }
 
 h1{
@@ -155,6 +157,6 @@ label{
 .myClass{
     color: red;
 }
-.hell{
-    
+.text-name{
+
 }
