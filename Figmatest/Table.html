@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-Data</title>
+    <link rel="stylesheet" href="Table.css">
+</head>
+<body> 
+    <h1 id="heading">Table Style : Demo 2</h1>
+    <div class="nav">
+        <h1><span id="navTitle">Data</span> List</h1>
+        <div class="headerbutton">
+        <button class="allheader">All</button>
+        <button class="activeheader">Active</button>
+        <button class="inActiveHeader">Inactive</button>
+        <button class="blockHeader">Blocked</button>
+    </div>
+    </div>
+    <table>
+        <tr class="table-header">
+            <th >#</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th class="status-content">Status</th>   
+            <th>Job Title</th>
+            <th class="status-content">Action</th> 
+        </tr>
+
+        <tr >
+            <td class="data">1</td>
+            <td class="data">Vincent Williamson</td>
+            <td class="data">31</td>
+            <td><button class="status">Active</button></td>          
+            <td class="data">IOS Developer</td>
+            <td><button class="manage">Manage</button></td>
+        </tr>
+        
+        <tr >
+            <td class="data">2</td>
+            <td class="data">Taylor Reyes</td>
+            <td class="data">22</td>
+            <td class="data"><button class="status-inactive">Inactive</button></td>          
+            <td class="data">UI/UX Developer</td>
+            <td class="data"><button class="manage">Manage</button></td>
+        </tr>
+        <tr >
+            <td class="data">3</td>
+            <td class="data">Justin Block</td>
+            <td class="data">26</td>
+            <td ><button class="status">Active</button></td>          
+            <td class="data">Frontend Developer</td>
+            <td><button class="manage">Manage</button></td>
+        </tr>
+        
+        <tr >
+            <td class="data">4</td>
+            <td class="data">Sean Guzman</td>
+            <td class="data">26</td>
+            <td><button class="status-block">Blocked</button></td>          
+            <td class="data">Web Designer</td>
+            <td><button class="manage">Manage</button></td>
+        </tr>        
+        <tr >
+            <td class="data">5</td>
+            <td class="data">Keith Carter</td>
+            <td class="data">20</td>
+            <td><button class="status">Active</button></td>          
+            <td class="data">Graphic Designer</td>
+            <td><button class="manage">Manage</button></td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p>Page 1 of 5</p>
+        <div class="input-button" >
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="4">
+        <input type="button" value="5">
+    </div>
+    </div>
+</body>
+</html>
