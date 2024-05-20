@@ -36,6 +36,7 @@ table{
     margin-top: -20px;
     background-color: white;
     padding-top: 10px;
+    border-collapse: collapse;
 }
 td{
     text-align: center;
@@ -99,14 +100,14 @@ td{
 .status-content{
    
     width: 1%;
-}
+} 
 
 .footer{
     background-color: white;
     height: 85px;
     margin-left: 60px;
     margin-right: 90px;
-    width: 1352px;
+    width: 1334px;
 }
 
 .footer p{
@@ -115,7 +116,7 @@ td{
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 15px;
 }
-input{
+.bt{
   width: 50px;
   height: 40px;
   margin-top: 30px;
@@ -191,3 +192,77 @@ a{
 #navTitle{
     font-weight: lighter;
 }
+
+.ab{
+    background-color: rgb(8, 165, 244);
+    display: inline-block;
+    border-radius: 5px 0px 0px 5px;
+    position: relative;
+    left: 17px;
+}
+.ba{
+    background-color: rgb(14, 243, 113);
+    display: inline-block;
+    border-radius: 0px;
+    position: relative;
+    left: 11px;
+}
+.cd{
+    background-color: rgb(231, 166, 14);
+    display: inline-block;
+    border-radius: 0px;
+    position: relative;
+    left: 7px;
+}
+.dc{
+    background-color: rgb(223, 17, 17);
+    display: inline-block;
+    border-radius: 0px 5px 5px 0px;   
+}
+
+li{
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.rad{
+    position: relative;
+    bottom: 565px;
+    left: 980px;
+}
+
+.rad  li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+#btn1{
+  position: relative;
+  border-radius: 5px 0px 0px 5px;
+}
+#btn2{
+    position: relative;
+    right:  7px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  #btn3{
+    position: relative;
+    right: 12px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  #btn4{
+    position: relative;
+    right: 17px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  #btn5{
+    position: relative;
+    right: 22px;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  table tr td{
+    border-bottom: 1px solid gainsboro;    
+  }

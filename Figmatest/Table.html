@@ -10,12 +10,12 @@
     <h1 id="heading">Table Style : Demo 2</h1>
     <div class="nav">
         <h1><span id="navTitle">Data</span> List</h1>
-        <div class="headerbutton">
+        <!-- <div class="headerbutton">
         <button class="allheader">All</button>
         <button class="activeheader">Active</button>
         <button class="inActiveHeader">Inactive</button>
         <button class="blockHeader">Blocked</button>
-    </div>
+    </div> -->
     </div>
     <table>
         <tr class="table-header">
@@ -35,7 +35,6 @@
             <td class="data">IOS Developer</td>
             <td><button class="manage">Manage</button></td>
         </tr>
-        
         <tr >
             <td class="data">2</td>
             <td class="data">Taylor Reyes</td>
@@ -74,12 +73,26 @@
     <div class="footer">
         <p>Page 1 of 5</p>
         <div class="input-button" >
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="3">
-        <input type="button" value="4">
-        <input type="button" value="5">
+        <input type="button" class="bt" id="btn1" value="1">
+        <input type="button" class="bt" id="btn2" value="2">
+        <input type="button" class="bt" id="btn3" value="3">
+        <input type="button" class="bt" id="btn4" value="4">
+        <input type="button" class="bt" id="btn5" value="5">
     </div>
+    </div>
+    <div class="rad">
+        <div class="ab">            
+            <label><li><input type="radio" name="all">All </input></li></label>            
+        </div>
+        <div class="ba">
+            <label> <li><input type="radio" name="all">Active</li></label>            
+        </div>
+        <div class="cd">
+          <label for=""><li><input type="radio" name="all">Inactive</li></label>
+        </div>
+        <div class="dc">
+            <label><li><input type="radio" name="all">Block</li></label>
+        </div>
     </div>
 </body>
 </html>
