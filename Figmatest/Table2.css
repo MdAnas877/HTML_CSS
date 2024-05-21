@@ -43,6 +43,7 @@ th:first-child {
 table{
     margin-top: 80px;
     margin: auto;
+    border-collapse: collapse;
 }
 
 td{
