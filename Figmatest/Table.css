@@ -27,7 +27,7 @@ body{
 
 th{
     font-size: 24px;
-    padding-top: 0px;
+    padding-top: 10px;
 }
 
 table{
@@ -107,7 +107,7 @@ td{
     height: 85px;
     margin-left: 60px;
     margin-right: 90px;
-    width: 1334px;
+    width: 1200px;
 }
 
 .footer p{
@@ -127,8 +127,9 @@ td{
 }
 .input-button{
     display: inline-block ;
-    margin-left: 950px;
-    margin-top: 1px;
+    margin-left: 840px;
+    margin-top: -7px;
+    position: absolute;
 }
 
 input:hover{
@@ -228,8 +229,8 @@ li{
 }
 .rad{
     position: relative;
-    bottom: 565px;
-    left: 980px;
+    bottom: 574px;
+    left: 890px;
 }
 
 .rad  li{
