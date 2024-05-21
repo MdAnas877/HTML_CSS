@@ -132,31 +132,28 @@ button:hover{
 }
 
 input[type="text"]{
-    margin-left: 500px;
+    margin-left: 700px;
     height: 35px;
     border-radius: 20px;
     border: 1px solid #989fac;
     width: 250px;
     margin-bottom: 25px;
     margin-top: 17px;
+    padding-left: 30px;
+
 }
 
-/* .search-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .search-icon {
+.i2{
     position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #999;
-  }
-  
-  .search-input {
-    padding-left: 30px; 
-    padding-right: 10px;
-  } */
+    left: 960px;
+    top: 95px;
+    color: #989fac;
+}
+
+.numIcon{
+    color: #3e526e;
+    font-size: 20px;
+    font-weight: 900;
+}
+
   

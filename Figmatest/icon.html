@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* Adjust this value to change the space between the icon and the left edge */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures the icon does not block clicks to the input */
+    color: #aaa; /* Adjust the color as needed */
+}
+
+.search-input {
+    padding-left: 30px; /* Adjust this value to match the width of the icon and the space you want */
+    width: 200px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    box-sizing: border-box; /* Ensures padding is included in the total width and height */
+    border: 1px solid #ccc; /* Adjust the border style as needed */
+    border-radius: 4px; /* Adjust the border radius as needed */
+    outline: none; /* Remove the default outline */
+}
+
+.search-input::placeholder {
+    color: #aaa; /* Adjust the placeholder color as needed */
+}
+
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search..." class="search-input">
+    </div>
+    
+</body>
+</html>
