@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <script src="https://kit.fontawesome.com/e2316e88b9.js" crossorigin="anonymous"></script>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .super-parrent{
+
+        .super-parrent {
             /* border: 1px solid black; */
 
         }
-        .sub{
+
+        .sub {
             border: 2px solid rgb(219, 219, 219);
             height: 800px;
             width: 28%;
-            margin-left:34% ;   
-           margin-top: 20px;
-           
+            margin-left: 34%;
+            margin-top: 20px;
         }
-        .sub img{
+
+        .sub img {
             margin-left: 40px;
         }
-        .sub h3{
+
+        .sub h3 {
             font-weight: 400;
-            font-family:  Arial;
+            font-family: Arial;
             margin-left: 46px;
             margin-top: -37px;
         }
-        #login{
-            background-color:  #0866ff;
-            border: 1px solid #0866ff ;
+
+        #login {
+            background-color: #0866ff;
+            border: 1px solid #0866ff;
             border-radius: 8px;
             width: 263px;
             height: 34px;
@@ -43,181 +48,193 @@
             font-size: 16px;
         }
 
-        .form-control{
+        .form-control {
             margin: 5px;
             padding: 10px;
             margin-left: 46px;
             width: 263px;
             height: 12px;
             border: 1px solid lightslategray;
-            border-color:lightslategray ;
+            border-color: lightslategray;
         }
 
-        .policy{
+        .policy {
             font-size: 14px;
             margin-right: 20px;
         }
 
-        .account{
-             border: 2px solid rgb(219, 219, 219);
-            height: 90px;   
+        .account {
+            border: 2px solid rgb(219, 219, 219);
+            height: 90px;
             width: 28%;
-            margin-left:34% ;   
-           margin-top: 20px;
+            margin-left: 34%;
+            margin-top: 20px;
         }
 
-        .account p{
+        .account p {
             margin: 50px;
             margin-left: 122px;
             font-weight: 100;
             margin-top: 34px;
         }
-    
-        .account span{
+
+        .account span {
             color: #0866ff;
         }
 
-         p{
+        p {
             margin-left: 46%;
             font-size: 18px
-         }
+        }
 
-         .logo{
+        .logo {
             width: 110px;
             margin-left: 520px;
-         }
-         .parrent-img{
+        }
+
+        .parrent-img {
             display: flex;
-         }   
-         .microsoft-img{
+        }
+
+        .microsoft-img {
             margin-left: 50px;
-         }
+        }
 
-         .about{
+        .about {
             list-style: none;
-            display: flex;       
+            display: flex;
             margin-left: 178px;
-         }
+        }
 
-         li{
+        li {
             padding: 0px;
             margin-left: 20px;
             font-size: 12px;
             font-family: Arial, Helvetica, sans-serif;
             color: lightslategray;
-         }
+        }
 
-         select{ 
-            margin-left: 500px;    
-            border: none;    
-            color: lightslategray;  
-         }
-   
-        a{
+        select {
+            margin-left: 500px;
+            border: none;
+            color: lightslategray;
+        }
+
+        a {
             text-decoration: none;
             color: rgb(0, 55, 107);
         }
-     
-        #last{
+
+        #last {
             color: lightslategray;
         }
-       .or p{
-        /* font-weight: 10px; */
-        font-size: 15px;
-       }
-       .or{
-        display: flex;
-        width: 10px;
-        
-       }
 
-       .or #or1{
-        margin-top: -5px;
-        margin-left: 46px;
-       }
+        .or p {
+            /* font-weight: 10px; */
+            font-size: 15px;
+        }
 
-       .or #or3{
-        margin-top: -5px;
-       }
-       i{
-        width: 10px;
-        height: 15px;
-        margin-right: 20px;
-       }
+        .or {
+            display: flex;
+            width: 10px;
+
+        }
+
+        .or #or1 {
+            margin-top: -5px;
+            margin-left: 46px;
+        }
+
+        .or #or3 {
+            margin-top: -5px;
+        }
+
+        i {
+            width: 10px;
+            height: 15px;
+            margin-right: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div class=".super-parrent">
         <div class="sub">
             <img src="./image/images.png" alt="">
-          <h3>Sign up to see photos and videos <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from your friends.</h3>
-           <br><br>
-           <button  id="login">
-            <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>            
-            Log in with Facebook
+            <h3>Sign up to see photos and videos
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from your
+                friends.</h3>
+            <br><br>
+            <button id="login">
+                <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
+                Log in with Facebook
 
-           </button>
-           
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-         <div class="or">
-            <p id="or1"> _______________</p>
-            <p>OR</p>
-            <p id="or3">________________</p>
-         </div> <br><br>     
-          
-         <form action="">
-            <input type="text" placeholder="Mobile Number or Email" class="form-control"><br>
-            <input type="text" placeholder="Full Name" class="form-control"><br>
-            <input type="text" placeholder="User Name" class="form-control"><br>
-            <input type="text" placeholder="Password" class="form-control"><br>
-         </form>
-          <br><br><br>
-         <h3 class="policy">People who use our service may have uploaded your contact information to Instagram. <br><span class="learn-more"><a href="">Learn More</a></span> </h3>
-         <br><br><br>
-         <h3 class="policy">By signing up, you agree to our <span class="learn-more"><a href=""></a>Terms</span> ,<span class="learn-more"><a href="">Privacy Policy</a></span> <span class="learn-more"><a href="">and Cookies Policy .</a></span>  </h3><br><br>
-         <input id="login" type="button" value="Sign Up"><br><br> 
+            </button>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="or">
+                <p id="or1"> _______________</p>
+                <p>OR</p>
+                <p id="or3">________________</p>
+            </div> <br><br>
+
+            <form action="">
+                <input type="text" placeholder="Mobile Number or Email" class="form-control"><br>
+                <input type="text" placeholder="Full Name" class="form-control"><br>
+                <input type="text" placeholder="User Name" class="form-control"><br>
+                <input type="text" placeholder="Password" class="form-control"><br>
+            </form>
+            <br><br><br>
+            <h3 class="policy">People who use our service may have uploaded your contact information to Instagram.
+                <br><span class="learn-more"><a href="">Learn More</a></span> </h3>
+            <br><br><br>
+            <h3 class="policy">By signing up, you agree to our <span class="learn-more"><a href=""></a>Terms</span>
+                ,<span class="learn-more"><a href="">Privacy Policy</a></span> <span class="learn-more"><a href="">and
+                        Cookies Policy .</a></span> </h3><br><br>
+            <input id="login" type="button" value="Sign Up"><br><br>
         </div>
 
         <div class="account">
-          <p>
-            Have an account ? <span>Log in</span> 
-          </p>
+            <p>
+                Have an account ? <span>Log in</span>
+            </p>
         </div><br><br>
         <p>Get the app.
-        </p><br>
+        </p><br> 
         <div class="parrent-img">
-         <img class="logo" src="./image/c5Rp7Ym-Klz.png" alt="">
-         <img class="logo microsoft-img" src="./image/EHY6QnZYdNX.png" alt="">
+            <img class="logo" src="./image/c5Rp7Ym-Klz.png" alt="">
+            <img class="logo microsoft-img" src="./image/EHY6QnZYdNX.png" alt="">
         </div>
-        </div><br><br><br>
+    </div><br><br><br>
 
-        <div class="about">
-            <li>Meta</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Jobs</li>
-            <li>Help</li>
-            <li>API</li>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Locations</li>
-            <li>Instagram Lite</li>
-            <li>Threads</li>
-            <li>Contact Uploading & Non-Users</li>
-            <li>Meta Verified</li>
-        </div><br>
-        <select name="" id="">
-            <option value="">English</option>
-            <option value="">Hindi</option>
-            <option value="">Africans</option>
-            <option value="">Dansk</option>
-            <option value="">Urdu</option>
-            <option value="">Arabic</option>
-            <option value="">Chinese</option>
-            <option value="">Spanish</option>
-            <option value="">French</option>
-            <option value="">Portugal</option>
-            <option value="">Italiona</option>
-        </select>&nbsp;&nbsp; <span id="last">© 2024 Instagram from Meta</span> 
+    <div class="about">
+        <li>Meta</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Jobs</li>
+        <li>Help</li>
+        <li>API</li>
+        <li>Privacy</li>
+        <li>Terms</li>
+        <li>Locations</li>
+        <li>Instagram Lite</li>
+        <li>Threads</li>
+        <li>Contact Uploading & Non-Users</li>
+        <li>Meta Verified</li>
+    </div><br>
+    <select name="" id="">
+        <option value="">English</option>
+        <option value="">Hindi</option>
+        <option value="">Africans</option>
+        <option value="">Dansk</option>
+        <option value="">Urdu</option>
+        <option value="">Arabic</option>
+        <option value="">Chinese</option>
+        <option value="">Spanish</option>
+        <option value="">French</option>
+        <option value="">Portugal</option>
+        <option value="">Italiona</option>
+    </select>&nbsp;&nbsp; <span id="last">© 2024 Instagram from Meta</span>
 </body>
+
 </html>
