@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Sign.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100 ">
+        <div class="card p-4  ">
+            <h2 class="text-center mb-4" style="font-family: Arial, Helvetica, sans-serif ;color: #595f67;">SIGN IN</h2>
+            <form>
+                <div class="form-group">
+                    <label class="info">Email address</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="hello@coderthemes.com">
+                </div>
+                <div class="form-group">
+                    <label class="info">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="showPasswordToggle">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="terms">
+                    <label class="form-check-label info">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;">Log In</button>
+
+                <div class="myPadding"></div>
+            </form>
+           
+        </div>
+    </div>
+
+    
+</body>
+</html>
