@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q 1. Write a function that takes an array and returns a new array with
+        // the elements reversed.
+
+        // const reversedArrayFunc = ((myArray)=>{
+        //    const reversedArray = myArray.reverse();
+        //    return  reversedArray;
+        // })
+        //  const myArray = [10,20,30,40,50];
+        //  const reversedArray = reversedArrayFunc(myArray);
+        //  console.log(reversedArray);
+
+
+        //     Q 2. Store an Array of object with multiple values in localStorage
+        // and retrieve it.
+        // Object key name, age, email.
+
+        // const users = [
+        //     { name: 'Anas', age: 25, email: 'anas@gmail.com' },
+        //     { name: 'Travis Head', age: 30, email: 'travishead@gmail.com' },
+        //     { name: 'Jos Butler', age: 32, email: 'butler@gmail.com' }
+        // ];
+
+        // const userData = JSON.stringify(users);
+
+        // localStorage.setItem('users', userData);
+
+        // const userDataGet = localStorage.getItem('users');
+
+        // const dataPrint = JSON.parse(userDataGet);
+
+        // console.log(dataPrint[0]);
+        // console.log(dataPrint[1]);
+        // console.log(dataPrint[2]);
+
+
+        // Q 3. To find out only the even numbers from the given array, use filter method.
+
+        //  let num = [1,2,3,4,5,6]
+        // let evennum= num.filter((value)=>{
+        //          return value%2==0
+        //  })
+        //  console.log(evennum);
+
+        // Q 4. Reduce an array.
+        // const array = [[1, 2], [3, 4], [5]];
+        // const flatItem  =   array.flat();
+        // const reduceItem =  flatItem.reduce((value,index)=>{
+        //    return value + index;
+        // })
+        // console.log(reduceItem);
+
+        // Q 5. Create a new array that contains the first 3 elements of an array.
+        // const array = [1, 2, 3, 4, 5];
+        // const newArr = [];
+        // for(let i=0;i<=2;i++){
+        //    newArr.push(array[i]);
+        // }
+        // console.log(newArr);
+
+        // Q 6. Set a value in localstorage and retrive it as ‘Hello, my name
+        // is ___ .
+
+        // localStorage.setItem('name', 'Anas');
+
+        // const name = localStorage.getItem('name');
+
+        // const message = `Hello, My name is ${name}.`;
+
+        // console.log(message);
+
+        // Q 7. Merge two array and place it to localstorage and retrive it in
+        //      sequence ?
+
+        // const array = [[1, 4], [5, 2], [3]];
+        // const arr = [9, 0, 6, 8, 10, 7];
+
+        // const flattenedArray = array.flat();
+        // const mergedArray = flattenedArray.concat(arr);
+
+        // localStorage.setItem('mergedArray', JSON.stringify(mergedArray));
+
+        // const newArr = JSON.parse(localStorage.getItem('mergedArray'));
+
+        // console.log(newArr);
+
+        // Q 8. create age wise equation that who is elegible for vote and who
+        //      is not and who is senior citizen by using switch case ?
+
+        // let age = prompt("Enter your age:");
+        // age = parseInt(age);
+
+        //     switch (true) {
+        //         case (age >= 0 && age <= 17):
+        //             console.log("You are not eligible to vote.");
+        //             break;
+        //         case (age >= 18 && age <= 59):
+        //             console.log("You are eligible to vote.");
+        //             break;
+        //         case (age >= 60 && age <= 150):
+        //             console.log("You are a senior citizen and eligible to vote.");
+        //             break;
+        //         default:
+        //             console.log("Invalid age input.");
+        //             break;
+        //     }       
+
+    </script>
+</body>
+
+</html>
