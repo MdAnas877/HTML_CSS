@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+        }
+        .box1, .box2 ,.box3,.box4{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            left: 175px;
+            top: 175px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box" id="move">
+        <div class="box1" id="sub1"></div>
+        <div class="box2" id="sub2"></div>
+        <div class="box3" id="sub3"></div>
+        <div class="box4" id="sub4"></div>        
+
+    </div>
+    <button onclick="handleClick()">Click Me</button>
+    <script src="animation.js"></script>
+</body>
+</html>
