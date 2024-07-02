@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 500px;
+            background-color: black;
+            position: relative;
+        }
+        #child1{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+        }
+
+        #child2{
+            margin-top: 450px;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+        }
+        #child3{
+            margin-top: 450px;
+            margin-left: 450px;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+        }
+        #child4{
+            /* margin-top: 500px; */
+            margin-left: 450px;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div  id="child1"></div>
+        <div  id="child2"></div>
+        <div  id="child3"></div>
+        <div  id="child4"></div>
+
+      
+
+    </div>
+    
+    <button onclick="handle()">Animation Button</button>
+    <script src="animation2.js"></script>
+</body>
+</html>

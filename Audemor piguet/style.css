@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    margin-top: -18px;
+}
+.right-nav{
+    display: inline-block;
+}
+
+li{
+    display: inline-block;
+    color: white;
+    /* position: absolute; */
+}
