@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main { 
+            padding: 20px;
+            border: 2px solid black;
+            width: 350px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="" onsubmit="data(event)">
+            <h1>Registration Form</h1>
+            <label for="">Name:</label>
+            <input type="text" id="fname" class="field"><br><br>
+            <label for="">Email:</label>
+            <input type="email" id="email" class="field"><br><br>
+            <label for="">Password</label>
+            <input type="password" id="password" class="field"><br><br>
+            <label for="">Confirm Password</label>
+            <input type="password" id="confirm" class="field"><br><br>
+            <input type="submit" onclick="data()">
+        </form>
+    </div>
+
+    <script>
+        function data(event){
+            event.preventDefault();
+        let fname = document.getElementById('fname').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let confirmPassword = document.getElementById('confirm').value;
+
+
+        console.log(fname);
+        console.log(email);
+        console.log(password);
+
+         if(fname === "" || email==="" ||  password === ""){
+            alert("All Field are nesessary to field");
+            return;
+         }
+         if(password !== confirmPassword){
+            alert("Password and Confirm Password should be matched")
+            return;
+         }
+
+
+        // let emp = [];
+        let emp = JSON.parse(localStorage.getItem('Data')) || [];
+
+        let obj ={
+            "name" : fname,
+            "email" : email,
+            "password" : password
+        }
+
+        if(emp.find((value)=>{
+            value.email === email;
+            
+        })){
+            alert("Email Already E");
+            return;
+        }
+
+
+        emp.push(obj)
+
+        localStorage.setItem('Data',JSON.stringify(emp));
+
+        window.location.href = "login.html";
+
+        }
+       
+
+    </script>
+</body>
+
+</html>
