@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Form</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #e96e70, #d0c696);
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      width: 30%;
+      margin-top: -250px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+     .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 5px;
+      color: #999;
+      transition: all 0.3s;
+      pointer-events: none;
+    } 
+
+    .form-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 7px;
+      color: white;
+    }
+
+    .form-group input[type="submit"] {
+      background: #ff4e50;
+      color: #fff;
+      border: none;
+      width: 430px;
+      font-weight: 700;
+    }
+    table{
+      margin-left: -492px;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2><script>
+        document.write(localStorage.getItem('Show'));
+    </script></h2>
+    <form onsubmit="data(event)">
+      <div class="form-group">
+        <input type="text" id="exp" placeholder=" ">
+        <label for="">Expenses</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="category"  placeholder=" ">
+        <label for="">Category</label>
+      </div>      
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div> <div style="width: 20px;"></div>
+  <center>
+  <table id="myTab" border="1">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Expenses</th>
+            <th>Category</th> 
+            <th>Action</th>       
+        </tr>
+    </thead>
+    <tbody id="myTabData">
+    </tbody>
+</table>
+</center>
+  <script>
+    function data(event){
+        event.preventDefault();
+        let exp = document.getElementById('exp').value;
+        let category= document.getElementById('category').value;
+        console.log(exp);
+        console.log(category);
+        let emp = JSON.parse(localStorage.getItem('Items')) || [];  
+        let obj ={
+            "exp" : exp,
+            "category" : category,
+        } 
+        emp.push(obj);
+        localStorage.setItem('Items',JSON.stringify(emp));  
+        showToTable();
+    }
+    
+    function showToTable(){
+        let data = JSON.parse(localStorage.getItem('Items')) || [];
+        let showData = document.getElementById('myTabData');
+        let printData = data.map((value, index)=>{
+            return `
+            <tr>
+            <td>${index + 1}</td>
+            <td> ${value.exp} </td>
+            <td> ${value.category} </td>
+            <td>
+            <button onclick="updateData('${value.exp}')">Edit</button>
+            <button onclick="deleteRow('${value.exp}')">Delete</button>
+                    </td>
+            </tr>
+            `;
+        }).join('');
+        showData.innerHTML = printData;
+    }
+    showToTable();
+
+    function deleteRow(exp){
+        let data = JSON.parse(localStorage.getItem('Items')) || [];
+        let category= data.findIndex((item)=>{
+            return item.exp === exp;
+        });
+            data.splice(category, 1);
+            localStorage.setItem('Items', JSON.stringify(data));
+            showToTable();       
+    }
+
+    function updateData(event){
+      window.location.href = "Update.html";
+    }
+  </script> 
+</body>
+</html>

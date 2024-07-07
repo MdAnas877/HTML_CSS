@@ -12,7 +12,7 @@
     <div class="container d-flex justify-content-center align-items-center vh-100 ">
         <div class="card p-4  ">
             <h2 class="text-center mb-4" style="font-family: Arial, Helvetica, sans-serif ;color: #595f67;">REGISTER</h2>
-            <form>
+            <form onsubmit="data(event)">
                 <div class="form-group">
                     <label class="info">Full Name</label>
                     <input type="text" class="form-control" id="fullName" placeholder="Enter your name">
@@ -32,18 +32,72 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="info">Confirm Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="confirm" placeholder="Confirm your password">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="showPasswordToggle">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="terms">
                     <label class="form-check-label info">I accept Terms and Conditions</label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;">Sign Up</button>
-
+                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;" onclick="data()">Submit</button>
                 <div class="myPadding"></div>
-            </form>
-           
+            </form>           
         </div>
     </div>
 
-    
+    <script>
+        function data(event){
+            // event.preventDefault();
+            event.preventDefault()
+        let fname = document.getElementById('fullName').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let confirmPassword = document.getElementById('confirm').value;
+
+
+        console.log(fname);
+        console.log(email);
+        console.log(password);
+
+         if(fname === "" || email==="" ||  password === ""){
+            alert("All Field are nesessary to field");
+            return;
+         }
+         if(password !== confirmPassword){
+            alert("Password and Confirm Password should be matched")
+            return;
+         }
+        //   debugger;
+        let emp = JSON.parse(localStorage.getItem('Data')) || [];
+
+      
+        let obj ={
+            "name" : fname,
+            "email" : email,
+            "password" : password
+        }
+
+        if(emp.find((value)=>{
+          return  value.email === email;
+            
+        })){
+            console.log("Anas");
+            alert("Email Already Exist");
+            return;
+        }
+
+        emp.push(obj)
+        localStorage.setItem('Data',JSON.stringify(emp));
+        window.location.href = "Login.html";
+        }
+        </script> 
 </body>
 </html>

@@ -11,11 +11,11 @@
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100 ">
         <div class="card p-4  ">
-            <h2 class="text-center mb-4" style="font-family: Arial, Helvetica, sans-serif ;color: #595f67;">SIGN IN</h2>
-            <form>
+            <h2 class="text-center mb-4" style="font-family: Arial, Helvetica, sans-serif ;color: #595f67;">LOGIN</h2>
+            <form onsubmit="dataLogin(event)">
                 <div class="form-group">
                     <label class="info">Email address</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="hello@coderthemes.com">
+                    <input type="text" class="form-control" id="email" placeholder="hello@coderthemes.com">
                 </div>
                 <div class="form-group">
                     <label class="info">Password</label>
@@ -32,14 +32,34 @@
                     <input type="checkbox" class="form-check-input" id="terms">
                     <label class="form-check-label info">Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;">Log In</button>
-
+                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;" onclick="dataLogin()">Log In</button>
                 <div class="myPadding"></div>
-            </form>
-           
+            </form>           
         </div>
-    </div>
-
+    </div>   
     
+    <script>
+        function dataLogin(e){
+            
+            e.preventDefault();
+            let email = document.getElementById('email').value;
+            let password= document.getElementById('password').value;
+         let data = JSON.parse(localStorage.getItem('Data'))  ;
+
+         if(data.find((value)=>{
+         return value.email === email && value.password === password;
+         })){
+            
+          let fname =  data.find((value)=>{
+              return value.name ;
+            })
+
+            localStorage.setItem('Show',fname.name);
+           window.location.href ="Home.html"
+         }
+        }
+      
+
+    </script>
 </body>
 </html>
