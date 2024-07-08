@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Update Form</title>
-  <style>
+  <!-- <style>
     body {
       font-family: 'Roboto', sans-serif;
       display: flex;
@@ -70,10 +70,97 @@
       width: 100%;
       font-weight: 700;
     }
+  </style> -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      margin-top: 55px;
+      margin-left: 440px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      width: 30%;
+  
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      /* position: relative; */
+    }
+
+    .form-group input {
+      width: 80%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: all 0.3s;
+      background: #f9f9f9;
+    }
+
+    .form-group input:focus {
+      border-color: #0072ff;
+      background: #e6f7ff;
+    }
+
+    .form-group label {
+      /* position: absolute; */
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 5px;
+      color: #999;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .form-group input:focus+label,
+    .form-group input:not(:placeholder-shown)+label {
+      top: -10px;
+      font-size: 12px;
+      color: #0072ff;
+    }
+
+    .form-group input[type="submit"] {
+      width: 91%;
+      background: #0072ff;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background: #005bb5;
+    }
   </style>
+
 </head>
 <body>
-  <div class="form-container">
+  <!-- <div class="form-container">
     <h2>Update Data</h2>
     <form onsubmit="updateData(event)">
       <div class="form-group">
@@ -89,21 +176,62 @@
         <input type="submit" value="Update Data">
       </div>
     </form>
-  </div> 
+  </div>  -->
+  <div class="form-container">
+    <h2>Hi <script>
+      document.write(localStorage.getItem('Show'))
+    </script></h2>
+    <form>
+      <div class="form-group">
+        <input type="text" id="exp" required placeholder=" ">
+        <label for="">Expenses</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="category" required placeholder=" ">
+        <label for="">Category</label>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Update Data" onclick="updateData(event)">
+      </div>
+    </form>
+  </div>
+  
   <script>
+     function openForm(event){
+        let data = JSON.parse(localStorage.getItem('Items'));
+        // console.log(data[0].exp);
+        // console.log(data[0].category);
+
+    let findData = data.find((value,index)=>{
+      return  value.exp == data[index].exp  && value.category == data[index].category;
+    })
+
+    if(findData){
+        document.getElementById('exp').value=findData.exp;
+        document.getElementById('category').value=findData.category;
+   
+      
+    }
+        // let edit = document.getElementById('forms');
+        // edit.style.display='block'
+    }
+
+    openForm(event);
 
     function updateData(event){
       event.preventDefault();
       let exp = document.getElementById('exp').value;
       let category = document.getElementById('category').value;
+
       let data = JSON.parse(localStorage.getItem('Items'));
       let index = data.findIndex((item)=>{
             return item.exp !== exp;
         })
+
         data[index] = { exp, category };
         localStorage.setItem('Items', JSON.stringify(data));
         alert("Data updated successfully!");
-        window.location.href = "home.html";      
+        window.location.href = "Home.html";      
     }
   </script> 
 </body>
@@ -126,123 +254,4 @@
 
 
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylish Form</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to right, #e96e70, #d0c696);
-    }
 
-    .form-container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      width: 30%;
-      margin-top: -250px;
-    }
-
-    .form-container h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: 700;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-      position: relative;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 10px 15px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-
-     .form-group label {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      transform: translateY(-50%);
-      background: #fff;
-      padding: 0 5px;
-      color: #999;
-      transition: all 0.3s;
-      pointer-events: none;
-    } 
-
-    .form-group input:not(:placeholder-shown) + label {
-      top: -10px;
-      font-size: 7px;
-      color: white;
-    }
-
-    .form-group input[type="submit"] {
-      background: #ff4e50;
-      color: #fff;
-      border: none;
-      width: 430px;
-      font-weight: 700;
-    }
-    table{
-      margin-left: -492px;
-      margin-top: 200px;
-    }
-  </style>
-</head>
-<body>
-  <div class="form-container">
-    <h2><script>
-        document.write(localStorage.getItem('Show'));
-    </script></h2>
-    <form onsubmit="updateData(event)">
-      <div class="form-group">
-        <input type="text" id="exp" placeholder=" ">
-        <label for="">Expenses</label>
-      </div>
-      <div class="form-group">
-        <input type="text" id="category"  placeholder=" ">
-        <label for="">Category</label>
-      </div>      
-      <div class="form-group">
-        <input type="submit" value="Update Data" onclick="updateData(event)">
-      </div>
-    </form>
-  </div> 
-
-  <script>
-    
-    function updateData(event){
-        
-        debugger;
-        event.preventDefault();
-        let exp = document.getElementById('exp').value;
-        let category = document.getElementById('category').value;
-
-            let data = JSON.parse(localStorage.getItem('Items'));
-
-        let myEmail = data.findIndex((item)=>{
-            return item.exp === exp;
-        })
-
-        data[myEmail]={exp, category};
-
-        localStorage.setItem('Items',JSON.stringify(data));
-    }
-  </script> 
-</body>
-</html> -->

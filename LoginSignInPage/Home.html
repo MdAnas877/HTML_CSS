@@ -1,164 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stylish Form</title>
+  <link rel="stylesheet" href="Table.css">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      display: flex;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      /* display: flex; */
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(to right, #e96e70, #d0c696);
+      margin: 0;
     }
 
     .form-container {
+      margin-top: 55px;
+      margin-left: 440px;
       background: #fff;
-      padding: 40px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       width: 30%;
-      margin-top: -250px;
+  
     }
 
     .form-container h2 {
       margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 28px;
+      font-weight: bold;
       color: #333;
+      text-align: center;
     }
 
     .form-group {
-      margin-bottom: 15px;
-      position: relative;
+      margin-bottom: 20px;
+      /* position: relative; */
     }
 
     .form-group input {
-      width: 100%;
-      padding: 10px 15px;
+      width: 80%;
+      padding: 12px 20px;
       font-size: 16px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 25px;
       outline: none;
-      transition: border-color 0.3s;
+      transition: all 0.3s;
+      background: #f9f9f9;
     }
 
-     .form-group label {
-      position: absolute;
+    .form-group input:focus {
+      border-color: #0072ff;
+      background: #e6f7ff;
+    }
+
+    .form-group label {
+      /* position: absolute; */
       top: 50%;
-      left: 15px;
+      left: 20px;
       transform: translateY(-50%);
       background: #fff;
       padding: 0 5px;
       color: #999;
       transition: all 0.3s;
       pointer-events: none;
-    } 
+    }
 
-    .form-group input:not(:placeholder-shown) + label {
+    .form-group input:focus+label,
+    .form-group input:not(:placeholder-shown)+label {
       top: -10px;
-      font-size: 7px;
-      color: white;
+      font-size: 12px;
+      color: #0072ff;
     }
 
     .form-group input[type="submit"] {
-      background: #ff4e50;
+      width: 91%;
+      background: #0072ff;
       color: #fff;
       border: none;
-      width: 430px;
-      font-weight: 700;
+      padding: 12px 0;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s;
     }
-    table{
-      margin-left: -492px;
-      margin-top: 200px;
+
+    .form-group input[type="submit"]:hover {
+      background: #005bb5;
     }
   </style>
 </head>
+
 <body>
   <div class="form-container">
-    <h2><script>
-        document.write(localStorage.getItem('Show'));
+    <h2>Hi <script>
+      document.write(localStorage.getItem('Show'))
     </script></h2>
-    <form onsubmit="data(event)">
+    <form>
       <div class="form-group">
-        <input type="text" id="exp" placeholder=" ">
+        <input type="text" id="exp" required placeholder=" ">
         <label for="">Expenses</label>
       </div>
       <div class="form-group">
-        <input type="text" id="category"  placeholder=" ">
+        <input type="text" id="category" required placeholder=" ">
         <label for="">Category</label>
-      </div>      
+      </div>
       <div class="form-group">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onclick="data(event)">
       </div>
     </form>
-  </div> <div style="width: 20px;"></div>
-  <center>
-  <table id="myTab" border="1">
+  </div>
+  
+  <table >
     <thead>
-        <tr>
-            <th>SNO</th>
-            <th>Expenses</th>
-            <th>Category</th> 
-            <th>Action</th>       
-        </tr>
+      <tr class="table-header">
+        <th>S.No</th>
+        <th>Expenses</th>
+        <th>Category</th>
+        <!-- <th class="status-content">Action</th>  -->
+        <th class="">Action</th>
+      </tr>
     </thead>
-    <tbody id="myTabData">
-    </tbody>
-</table>
-</center>
-  <script>
-    function data(event){
-        event.preventDefault();
-        let exp = document.getElementById('exp').value;
-        let category= document.getElementById('category').value;
-        console.log(exp);
-        console.log(category);
-        let emp = JSON.parse(localStorage.getItem('Items')) || [];  
-        let obj ={
-            "exp" : exp,
-            "category" : category,
-        } 
-        emp.push(obj);
-        localStorage.setItem('Items',JSON.stringify(emp));  
-        showToTable();
-    }
+  
+    <tbody id="myTabData"></tbody>
+  </table>
+</body>
+</html>
+<script>
+  function data(event) {
+    event.preventDefault();
+    let exp = document.getElementById('exp').value;
+    let category = document.getElementById('category').value;
     
-    function showToTable(){
-        let data = JSON.parse(localStorage.getItem('Items')) || [];
-        let showData = document.getElementById('myTabData');
-        let printData = data.map((value, index)=>{
-            return `
+    let emp = JSON.parse(localStorage.getItem('Items')) || [];
+    let obj = {
+      "exp": exp,
+      "category": category,
+    }
+    emp.push(obj);
+    localStorage.setItem('Items', JSON.stringify(emp));
+    showToTable(); 
+    let ex = document.getElementById('exp').value = " ";
+    let bg = document.getElementById('category').value = " ";
+
+  }
+
+  function showToTable() {
+    let data = JSON.parse(localStorage.getItem('Items')) || [];
+    let showData = document.getElementById('myTabData');
+    let printData = data.map((value, index) => {
+      return `
             <tr>
-            <td>${index + 1}</td>
-            <td> ${value.exp} </td>
-            <td> ${value.category} </td>
+           <td><h2> ${index + 1}</h2> </td>
+            <td><h2> ${value.exp}</h2> </td>
+            <td> <h2> ${value.category}</h2> </td> 
             <td>
-            <button onclick="updateData('${value.exp}')">Edit</button>
-            <button onclick="deleteRow('${value.exp}')">Delete</button>
+            <button onclick="updateData('${value.exp}')" class="status">Edit</button>
+            <button onclick="deleteRow('${value.exp}')" class="status">Delete</button>
                     </td>
             </tr>
             `;
-        }).join('');
-        showData.innerHTML = printData;
-    }
+    }).join('');
+    console.log("anas");
+    showData.innerHTML = printData;
+
+  }
+  showToTable();
+
+  function deleteRow(exp) {
+    let data = JSON.parse(localStorage.getItem('Items')) || [];
+    let category = data.findIndex((item) => {
+      return item.exp === exp;
+    });
+    data.splice(category, 1);
+    localStorage.setItem('Items', JSON.stringify(data));
     showToTable();
+  }
 
-    function deleteRow(exp){
-        let data = JSON.parse(localStorage.getItem('Items')) || [];
-        let category= data.findIndex((item)=>{
-            return item.exp === exp;
-        });
-            data.splice(category, 1);
-            localStorage.setItem('Items', JSON.stringify(data));
-            showToTable();       
-    }
-
-    function updateData(event){
-      window.location.href = "Update.html";
-    }
-  </script> 
+  function updateData(event) {
+    window.location.href = "Update.html";
+  }
+</script>
 </body>
+
 </html>
