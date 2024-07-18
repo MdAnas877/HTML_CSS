@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Sign.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100 ">
+        <div class="card p-4  ">
+            <h2 class="text-center mb-4" style="font-family: Arial, Helvetica, sans-serif ;color: #595f67;">LOGIN</h2>
+            <form onsubmit="login(event) ">
+                <div class="form-group">
+                    <label class="info">Email address</label>
+                    <input type="text" class="form-control" id="email" placeholder="hello@coderthemes.com">
+                </div>
+                <div class="form-group">
+                    <label class="info">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="showPasswordToggle">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="terms">
+                    <label class="form-check-label info">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;" onclick="dataLogin()">Log In</button>
+                <div class="myPadding"></div>
+            </form>           
+        </div>
+    </div>   
+    <script src="./script.js"></script>
+    <!-- <script>
+        function dataLogin(e){
+            
+            e.preventDefault();
+            let email = document.getElementById('email').value;
+            let password= document.getElementById('password').value;
+         let data = JSON.parse(localStorage.getItem('Data'))  ;
+
+         if(data.find((value)=>{
+         return value.email === email && value.password === password;
+         })){
+            
+          let fname =  data.find((value)=>{
+              return value.name ;
+            })
+
+            localStorage.setItem('Show',fname.name);
+           window.location.href ="Home.html"
+         }
+        }
+      
+
+    </script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Library-Login</title>
+
+</head>
+
+<body id="content" style="overflow: hidden;">
+    <header>
+        <div class="logo">
+            <img src="https://st4.depositphotos.com/1842549/20889/i/450/depositphotos_208897764-stock-photo-library-icon.jpg"
+                alt="Logo">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search..." id="searchTerm">
+            <button onclick="highlightSearch(event)">Search</button>
+        </div>
+        <div class="auth-buttons">
+            <button class="login" onclick="logins()">Login</button>
+            <button class="register" onclick="registers()">Register</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form onsubmit="login(event)">
+                <div class="form-group">
+                    <label>Email Id</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                </div>
+                <div>
+                    <h2><a href="./register.html">Click Here To Register</a></h2>
+                </div>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="https://st2.depositphotos.com/1594308/9572/i/450/depositphotos_95725034-stock-photo-teenager-with-stack-of-books.jpg"
+                alt="Books Image">
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html> -->
