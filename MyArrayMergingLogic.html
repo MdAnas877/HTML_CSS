@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      const array1 = [10,20,30,40,50]
+      const array2 = [100,200,300,400,500]
+      const array4 = [1000,2000,3000,4000];
+      const array5 = [1,2,3,4];
+
+      const array3 = []
+      for(let i=0;i<array1.length;i++){
+          array3[i]  = array1[i];
+      }
+
+      for(let i=0;i<array2.length;i++){
+          array3[array3.length]  = array2[i];
+      }
+
+      for(let i=0;i<array4.length;i++){
+          array3[array3.length]  = array4[i];
+      }
+
+      for(let i=0;i<array5.length;i++){
+          array3[array3.length]  = array5[i];
+      }
+
+      
+
+
+      console.log(array3);
+      
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
