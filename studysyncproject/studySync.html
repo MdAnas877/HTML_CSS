@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+            text-align: center;
+            height: fit-content;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            padding: 0.8rem;
+        }
+        .headerContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1080px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        .logoContainer a{
+            display: flex;
+        }
+        .logoImg{
+            height: 60px;
+            width: 60px;
+        }
+        .logoText{
+            color: #333333;
+            font-size: 1.7rem;
+            display: flex;
+            align-items: center;
+        }
+        .navContainer .navList{
+            display: flex;
+            justify-content: space-around;
+            gap: 1.5rem;
+        }
+        .navContainer .navList a{
+            color: #5a6372;
+            /* border: 1px solid black; */
+            /* height: 35px;
+            width: 80px;
+            padding: 0.5rem;
+            border-radius: 20px; */
+        }
+        .navContainer .navList a:hover{
+            color: #2563eb;
+            /* background-color: #333333; */
+        }
+        .contactBtn{
+            height: 35px;
+            width: 100px;
+            border: none;
+            border-radius: 0.275rem;
+            background-color: #5b5ef2;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .contactBtn:hover{
+            background-color: #4144f2;
+            cursor: pointer;
+        }
+        .heroContainer{
+            display: flex;
+            height: 72vh;
+            justify-content: center;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            margin-top: 2rem;
+            justify-content: space-between;
+        }
+        .leftBox{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+            width: 40%;
+        }
+        .heroHeading{
+            font-weight: bolder;
+            font-size: 2.6rem;
+        }
+        .heroText{
+            color: #595bdf;
+            font-size: 1.2rem;
+            margin-top: 0px;
+        }
+        .heroDescription{
+            font-size: 1.2rem;
+            color: #5a6372;
+        }
+        .heroBtn{
+            width: 70%;
+            display: flex;
+            gap: 1.4rem;
+        }
+        .startBtn, .tourBtn{
+            height: 35px;
+            width: 100px;
+            border: none;
+            border-radius: 0.275rem;
+            background-color: #5b5ef2;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .tourBtn{
+            background-color: #333333;
+        }
+        .startBtn:hover{
+            background-color: #4144f2;
+        }
+        .tourBtn:hover{
+            background-color: #555;
+        }
+        .rightBox{
+            width: 60%;
+            overflow: hidden;
+        }
+        .heroPoster{
+            height: 71vh;
+            width: 80%;
+            background-size: cover;
+            float: right;
+            border-radius: 10px;
+        }
+        .companyContainer{
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .companyTitle{
+            font-size: 1.9rem;
+        }
+        .companyLogo{
+            height: 13px;
+            
+        }
+        .companyDetail{
+            display: grid;
+            grid-template-columns: repeat(1,0.4fr);
+            display: flex;
+            background-color: #e0e0e0;
+            padding: 20px;
+            gap: 2.5rem;
+            justify-content: center;
+            border-radius: 7px;
+        }
+        .companyLink{
+            font-size: large;
+            color: #555;
+        }
+        .cardSection-wholeContainer{
+            background-color: #e0e0e0;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: -13px;
+            margin-bottom: 20px;
+            height: 145vh;
+        }
+        .parentCardContainer{
+            max-width: 52%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .outside-card{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+
+        }
+        .cardOutside-heading{
+            font-size: 1.8rem;
+        }
+        .cardOutside-description{
+            color: #5a6372;
+        }
+
+        .cardContainer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 15px;
+            margin-top: 15px;            
+        }
+        .card1,.card2,.card3,.card4,.card5,.card6{
+            background-color: rgb(51, 163, 201);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 7px;
+            padding: 22px;
+            gap: 15px;
+        }
+        .card1{
+            background-color: #4e90e2;
+        }
+        .card2{
+            background-color: #ff4372;
+        }
+        .card3{
+            background-color: #ffad20;
+        }
+        .card4{
+            background-color: #3da9ad;
+        }
+        .card5{
+            background-color: #6ca651;
+        }
+        .card6{
+            background-color: #676395;
+        }
+        .cardImg{
+            height: 60px;
+            width: 20%;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .cardHeading{
+            font-size: 1.1rem;
+        }
+        .testimonial-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .testimonial-heading{
+            font-size: 1.6rem;
+        }
+        .testimonial-card-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+        }
+        .testimonial-card{
+            display: flex;
+            flex-direction: column;
+            border: 1.5px solid #bbbbbb;
+            align-items: center;
+            gap: 15px;
+            border-radius: 0.725rem;
+            padding: 0.8rem;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.7s ease ;
+        }
+        .testimonial-card:hover{
+            transform: scale(1.05);
+            border: 2px solid #5b5ef2;
+            box-shadow: 0px 10px 30px #de71e6;
+        }
+        .testimonial-card-description{
+            font-weight:500;
+        }
+        .testimonial-img{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .testimonial-author{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .testimonial-author-name{
+            color: #262af6;
+        }
+        .testimonial-author-description{
+            color: #555;
+        }
+        .letterContainer{
+            display: flex;
+            max-width: 1120px;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+        }
+        .leftBoxLetter{
+            width: 50%;
+        }
+        .letterImg{
+            height: 100%;
+            width: 100%;
+        }
+        .rightBoxLetter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .letterHeader{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .letterHeading{
+            color: #5052c0;
+            font-size: 1.9rem;
+        }
+        .letterInfo{
+            color: #4a525f;
+            font-weight: 600;
+        }
+        .letterTextField{
+            height: 35px;
+            width: 200px;
+            border-radius: 3px;
+            border: 1px solid #4a525f;
+            outline: none;
+        }
+        .letterBtn{
+            height: 35px;
+            width: 65px;
+            border-radius: 5px;
+            border: none;
+            background-color: #5b5ef2;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .letterTextField:focus{
+            border: 2px solid #2563eb;
+
+        }
+        .letterBtn:hover{
+            background-color: #4144f2;
+            cursor: pointer;
+        }
+        .letterFooter{
+            color: #4a525f;
+            font-weight: 500 ;
+            padding: 0.rem;
+            text-align: left;
+            font-size: 12px;
+        }
+        .letterFooter a{
+            font-size: 12px;
+            text-decoration: underline;
+            color: #262af6;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="headerContainer">
+                <div class="logoContainer">
+                    <a href="#">
+                      <img src="logo.png" alt="" class="logoImg">
+                      <h2 class="logoText">StudySync</h2>
+                    </a>
+                </div>
+                <div class="navContainer">
+                    <nav class="navList">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Blog</a>
+                        <a href="#">About</a>
+
+                    </nav>
+                </div>
+                <div class="contactUs">
+                    <a href="#">
+                        <input type="button" value="Contact Us" class="contactBtn">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="heroContainer">
+                <div class="leftBox">
+                    <p class="heroText">
+                        Very proud to introduce
+                    </p>
+                    <h1 class="heroHeading">
+                        Seamless Learning for Brighter Futures
+                    </h1>
+                    <p class="heroDescription">
+                        Our innovative platform offers an effertless and seamless approach
+                        to learning, empowering students of all ages to achieve Brighter
+                        futures. Join us on a transformative journey to simplify education
+                        and unlock your full potential.
+                    </p>
+                    <div class="heroBtn">
+                        <input type="button" value="Start Now" class="startBtn">
+                        <input type="button" value="Take Tour" class="tourBtn">
+                    </div>
+                </div>
+
+                <div class="rightBox">
+                    <img src="hero.jpg" alt="" class="heroPoster">
+                </div>
+            </div>
+
+            <div class="companyContainer">
+                    <h2 class="companyTitle">
+                        Trusted by the best
+                    </h2>
+                <div class="companyDetail">
+                    <div class="firstLogo">
+                        <img src="pngaaa.com-1216887.png" alt="" class="companyLogo">
+                        <a href="#" class="companyLink">Google</a>
+                    </div>
+                    <div class="secondLogo">
+                        <img src="windowsLogo.png" alt="" class="companyLogo">
+                        <a href="#" class="companyLink">Microsoft</a>
+                    </div>
+                    <div class="thirdLogo">
+                       <img src="linkedIn_Logo.png" alt="" class="companyLogo">
+                       <a href="#" class="companyLink">LinkedIn</a>
+                    </div>
+                    <div class="fourthLogo">
+                       <img src="amazon.jpg" alt="" class="companyLogo">
+                       <a href="#" class="companyLink">Amazon</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cardSection-wholeContainer">
+                <div class="parentCardContainer">
+                    <div class="outside-card">
+                       <h2 class="cardOutside-heading">Our competitive advantage</h2>
+                       <p class="cardOutside-description">
+                        This is a section of some filter text,also known as placeholder text.
+                        It shares some characterstics of real written text but it is 
+                        random or otherwise generated.
+                    </p>
+                    </div>
+                    <div class="cardContainer">
+
+                        <!-- card 1 starts here -->
+
+                        <div class="card1">
+                                <img src="bulb.jpg" alt="" class="cardImg">
+                                <h4 class="cardHeading">Personalized Learning</h4>
+                                <p class="cardDescription">Offer tailored learning experiences through AI and 
+                                    machine learning to cater to individual student needs.
+                                </p>
+                        </div>
+
+                        <!-- card 1 ends here -->
+                         
+                        <!-- card 2 starts here -->
+
+                        <div class="card2">
+                            <img src="dollar.png" alt="" class="cardImg">
+                                <h4 class="cardHeading">Affordability</h4>
+                                <p class="cardDescription">Provide high quality education at
+                                    an affordable price point,making it accessible to a 
+                                    broader audience.
+                                </p>
+                        </div>
+
+                        <!-- card 2 ends here -->
+
+                        <!-- card 3 starts here -->
+
+                        <div class="card3">
+                            <img src="shakehand.jpg" alt="" class="cardImg">
+                                <h4 class="cardHeading">Industry Partnerships</h4>
+                                <p class="cardDescription">Collaborate with well-known companies
+                                    and institutions to offer accredited courses and certifications,
+                                    adding credibility to your offerings.
+                                </p>
+                        </div>
+
+                        <!-- card 3 ends here -->
+
+                        <!-- card 4 starts here -->
+
+                        <div class="card4">
+                            <img src="pc.jpg" alt="" class="cardImg">
+                                <h4 class="cardHeading">Innovative Technology</h4>
+                                <p class="cardDescription">Utilize cutting-edge technology,
+                                    such as augmented reality or virtual reality, to create
+                                    immersive learning experiences for our users.
+                                </p>
+                        </div>
+
+                        <!-- card 4 ends here -->
+
+                        <!-- card 5 starts here -->
+
+                        <div class="card5">
+                            <img src="call.jpg" alt="" class="cardImg">
+                                <h4 class="cardHeading">Responsive Support</h4>
+                                <p class="cardDescription">Provide exceptional customer support
+                                    and assistance to students and educators, by which it will
+                                    provide friendly user-interface and good understanding
+                                </p>
+                        </div>
+
+                        <!-- card 5 ends here -->
+
+                        <!-- card 6 starts here -->
+
+                        <div class="card6">
+                            <img src="stock.webp" alt="" class="cardImg">
+                                <h4 class="cardHeading">Analytics and Insights</h4>
+                                <p class="cardDescription">Offer detailed progress tracking,
+                                    and analytics to help students and teachers monitor performance 
+                                    and make data-driven decisions.
+                                </p>
+                        </div>
+
+                        <!-- card 6 ends here -->
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-container">
+                <div class="testimonial-header">
+                    <h2 class="testimonial-heading">What Others Say About Us</h2>
+                </div>
+                <div class="testimonial-card-container">
+
+                    <!-- testimonial card 1 starts -->
+                     
+                    <div class="testimonial-card">
+
+                        <p class="testimonial-card-description">
+                            "StudySync revolutionized my classroom! Engaging content and teacher
+                            resources make learning enjoyable. Highly recommended for educators"
+                        </p>
+                        <img src="https://i.pravatar.cc/150?img=5" alt="" class="testimonial-img">
+                        <div class="testimonial-author">
+                           <h4 class="testimonial-author-name">Sarah Johnson</h4>
+                           <p class="testimonial-author-description">8th Grade English Teacher</p>
+                        </div>
+                    </div>
+
+                    <!-- testimonial card 1 ends -->
+
+
+                    <!-- testimonial card 2 starts-->
+
+                    <div class="testimonial-card">
+
+                        <p class="testimonial-card-description">
+                            "StudySync transformed our family's learning journey. Safe, interactive,
+                            and progress tracking features are invalueable for parents."
+                        </p>
+                        <img src="https://i.pravatar.cc/150?img=65" alt="" class="testimonial-img">                   
+                        <div class="testimonial-author">
+                            <h4 class="testimonial-author-name">Mark Davis</h4>
+                            <p class="testimonial-author-description">Parent</p>
+                        </div>  
+                    </div>
+
+                    <!-- testimonial card 2 ends -->
+
+
+                    <!-- testimonial card 3 starts-->
+
+                    <div class="testimonial-card">
+
+                        <p class="testimonial-card-description">
+                            "StudySync, a true game-changer! Flexible content, tailored assessments,
+                            and excellent support. Integral to our school district's success."
+                        </p>
+                        <img src="https://i.pravatar.cc/150?img=69" alt="" class="testimonial-img">
+                        <div class="testimonial-author">
+                            <h4 class="testimonial-author-name">Dr. James Carter</h4>
+                            <p class="testimonial-author-description">School Administrator</p>
+                        </div>
+                    </div>
+                    <!-- testimonial card 3 ends -->
+
+                    
+                </div>
+            </div>
+
+            <div class="letterContainer">
+                <div class="leftBoxLetter">
+                    <img src="hero2.webp" alt="" class="letterImg">
+                </div>
+                <div class="rightBoxLetter">
+                    <div class="letterHeader">
+                        <h2 class="letterHeading">
+                            Get the latest updates
+                        </h2>
+                        <p class="letterInfo">
+                            Sign up for our newsletter 
+                        </p>
+                    </div>
+                    <div class="letterEmailField">
+                        <input type="text" class="letterTextField" placeholder="    Email">
+                        <input type="button" value="Send" class="letterBtn">
+                    </div>
+                    <div class="letterFooter">
+                        By signing up to our newsletter you agree to our
+                        <span>
+                        <a href="">Terms of Services</a>
+                        </span>
+                        and 
+                        <span>
+                        <a href="">Privacy Policy</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footerSection">
+                <div class="footerContainer">
+                    <div class="footerLeftBox">
+                        <div class="footerLeftBoxHeader">
+                            <img src="" alt="">
+                            <h3></h3>
+                        </div>
+                        <p></p>
+                        <div class="footerSocialIcons">
+
+                            <a href="#instagram">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#twitter">
+                                <img src="" alt="">
+                            </a> 
+                            <a href="#linkedIn">
+                                <img src="" alt="">
+                            </a>
+                             <a href="#gitHub">
+                                <img src="" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="footerRightBox">
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+</body>
+</html>
