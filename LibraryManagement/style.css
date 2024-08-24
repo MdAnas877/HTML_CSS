@@ -154,7 +154,7 @@ header {
   background-color: #fff;
   margin-top: -65px;
   margin-left: 390px;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -178,7 +178,6 @@ header {
 }
 
 .form-group label {
-
   font-weight: 600; 
   color: #444; 
   font-size: 16px; 
@@ -322,3 +321,7 @@ button:hover {
   margin-top: 50px;
 }
 
+#bookForm{
+  
+  display: none;
+}

@@ -26,59 +26,34 @@
             <input type="password" id="password" class="field"><br><br>
             <label for="">Confirm Password</label>
             <input type="password" id="confirm" class="field"><br><br>
-            <input type="submit" onclick="data()">
+            <input type="submit" onclick="data(event)">
         </form>
     </div>
-
     <script>
-        function data(event){
-            event.preventDefault();
+    function data(event){
+        event.preventDefault();
         let fname = document.getElementById('fname').value;
         let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
-        let confirmPassword = document.getElementById('confirm').value;
+        let password= document.getElementById('password').value;
+        let confirm = document.getElementById('email').value;
 
+        let data =JSON.parse(localStorage.getItem('Data')) ? JSON.parse(localStorage.getItem('Data')):[];
+         console.log(data);
 
-        console.log(fname);
-        console.log(email);
-        console.log(password);
-
-         if(fname === "" || email==="" ||  password === ""){
-            alert("All Field are nesessary to field");
-            return;
-         }
-         if(password !== confirmPassword){
-            alert("Password and Confirm Password should be matched")
-            return;
-         }
-
-        let emp = JSON.parse(localStorage.getItem('Data')) || [];
-
-        let obj ={
+         let obj = {
             "name" : fname,
             "email" : email,
             "password" : password
+         }
+         data.push(obj);
+         localStorage.setItem("Data",JSON.stringify(data));
+
+         window.location.href="login.html";
         }
-
-        if(emp.find((value)=>{
-            value.email === email;
-            
-        })){
-            alert("Email Already E");
-            return;
-        }
-
-
-        emp.push(obj)
-
-        localStorage.setItem('Data',JSON.stringify(emp));
-
-        window.location.href = "login.html";
-
-        }
-       
+        
 
     </script>
+   
 </body>
 
 </html>

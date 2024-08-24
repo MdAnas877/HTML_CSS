@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+           background-color: black;
+           width: 200px;
+           display: inline-block;
+           height: 600px;
+           color: white;
+        }
+        .child{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+      <h1><input type="Add Book"> </h1> 
+        <h1>Show Book</h1>
+    </div>
+    <div class="child">
+     <table border="1">
+        <tr>
+            <th>Sno</th>
+            <th>Book Name</th>
+            <th>Auther Name</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="myTab">
+        </tbody>
+     </table>
+
+    </div>
+    <script>
+        // function showData(){
+        //     let data = JSON.parse(localStorage.getItem('Items'));
+        //     let showData = document.getElementById('myTab');
+        //     let printData = data.map((value,index)=>{
+        //         return`
+        //         <td>${index + 1}</td>
+        //         <td>${value.exp}</td>
+        //         <td>${value.category}</td>
+        //         `
+        //      })
+        //      showData.innerHTML = printData;
+        // }
+        //  showData();
+       
+    </script>
+</body>
+</html>

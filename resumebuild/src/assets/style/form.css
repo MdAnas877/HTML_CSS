@@ -1,0 +1,135 @@
+/* General Form Styles */
+form {
+    background-color: #ffffff; /* White background */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #ebebeb; /* Light gray border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Form Hover Effect */
+form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Label Styles */
+.form-label {
+    font-weight: 500;
+    color: #2c3e50; /* Darker text for contrast */
+    margin-bottom: 6px;
+}
+
+/* Input, Textarea, and Select Styles */
+.form-control {
+    border: 2px solid #e5e5e5; /* Thicker, light gray border */
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 15px;
+    background-color: #f9f9f9; /* Slightly off-white background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2ecc71; /* Green border on focus */
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.3); /* Green glow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Row Spacing */
+.row {
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #2ecc71; /* Green background */
+    border-color: #27ae60;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3); /* Green shadow on hover */
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Red background */
+    border-color: #c0392b;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3); /* Red shadow on hover */
+}
+
+/* Adjust Button Widths */
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* Specific Styles for Textareas */
+textarea.form-control {
+    height: 120px; /* Taller text area */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* File Input Styles */
+input[type="file"].form-control {
+    padding: 6px;
+    height: auto;
+    border-radius: 6px;
+    background-color: #f9f9f9; /* Match other inputs */
+}
+
+/* Custom Styles for Responsive Layout */
+@media (max-width: 768px) {
+    .col-3, .col-4, .col-6, .col-12 {
+        width: 100%;
+    }
+    .w-50 {
+        width: 100%;
+    }
+}
+
+/* Add hover effect on form inputs */
+.form-control:hover {
+    border-color: #ddd; /* Darker border on hover */
+}
+
+/* Add subtle animations to inputs and buttons */
+.form-control, .btn {
+    transition: all 0.3s ease;
+}
+
+/* Animation for labels */
+.form-label {
+    position: relative;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

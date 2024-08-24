@@ -1,0 +1,9 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-wrapper {
+    position: relative; 
+    margin: 10px; 
+}

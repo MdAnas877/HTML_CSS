@@ -1,0 +1,22 @@
+/* Resume.css */
+.resume-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.resume-container h1 {
+    margin-bottom: 20px;
+}
+
+.resume-container p {
+    margin: 5px 0;
+}
+
+.resume-container img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}

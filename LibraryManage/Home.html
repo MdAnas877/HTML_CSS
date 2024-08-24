@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Form</title>
+  <link rel="stylesheet" href="Table.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      margin-top: 55px;
+      margin-left: 440px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      width: 30%;
+  
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      /* position: relative; */
+    }
+
+    .form-group input {
+      width: 80%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: all 0.3s;
+      background: #f9f9f9;
+    }
+
+    .form-group input:focus {
+      border-color: #0072ff;
+      background: #e6f7ff;
+    }
+
+    .form-group label {
+      /* position: absolute; */
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 5px;
+      color: #999;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .form-group input:focus+label,
+    .form-group input:not(:placeholder-shown)+label {
+      top: -10px;
+      font-size: 12px;
+      color: #0072ff;
+    }
+
+    .form-group input[type="submit"] {
+      width: 91%;
+      background: #0072ff;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background: #005bb5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Hi <script>
+      document.write(localStorage.getItem('Show'))
+    </script></h2>
+    <form>
+      <div class="form-group">
+        <input type="text" id="exp" required placeholder=" ">
+        <label for="">Expenses</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="category" required placeholder=" ">
+        <label for="">Category</label>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" onclick="data(event)">
+      </div>
+    </form>
+  </div>
+  
+  <table >
+    <thead>
+      <tr class="table-header">
+        <th>AUTHOR</th>
+        <th>BOOK</th>
+        <th>DATE</th>
+        <!-- <th class="status-content">Action</th>  -->
+        <th class="">Action</th>
+      </tr>
+    </thead>
+  
+    <tbody id="myTabData"></tbody>
+  </table>
+</body>
+</html>
+<script>
+  function data(event) {
+    event.preventDefault();
+    let exp = document.getElementById('exp').value;
+    let category = document.getElementById('category').value;
+    
+    let emp = JSON.parse(localStorage.getItem('Items')) || [];
+    let obj = {
+      "exp": exp,
+      "category": category,
+    }
+    emp.push(obj);
+    localStorage.setItem('Items', JSON.stringify(emp));
+    showToTable(); 
+    let ex = document.getElementById('exp').value = " ";
+    let bg = document.getElementById('category').value = " ";
+
+  }
+
+  function showToTable() {
+    let data = JSON.parse(localStorage.getItem('Items')) || [];
+    let showData = document.getElementById('myTabData');
+    let printData = data.map((value, index) => {
+      return `
+            <tr>
+           <td><h2> ${index + 1}</h2> </td>
+            <td><h2> ${value.exp}</h2> </td>
+            <td> <h2> ${value.category}</h2> </td> 
+            <td>
+            <button onclick="updateData('${value.exp}')" class="status">Edit</button>
+            <button onclick="deleteRow('${value.exp}')" class="status">Delete</button>
+                    </td>
+            </tr>
+            `;
+    }).join('');
+    console.log("anas");
+    showData.innerHTML = printData;
+
+  }
+  showToTable();
+
+  function deleteRow(exp) {
+    let data = JSON.parse(localStorage.getItem('Items')) || [];
+    let category = data.findIndex((item) => {
+      return item.exp === exp;
+    });
+    data.splice(category, 1);
+    localStorage.setItem('Items', JSON.stringify(data));
+    showToTable();
+  }
+
+  function updateData(event) {
+    window.location.href = "Update.html";
+  }
+</script>
+</body>
+
+</html>

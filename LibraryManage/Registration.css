@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/23/18/15/board-1854180_640.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.myPadding{
+    padding-bottom: 60px;
+}
+
+.info{
+    color: lightslategray;
+    font-weight: bold;
+}

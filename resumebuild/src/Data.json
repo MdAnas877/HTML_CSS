@@ -1,0 +1,16 @@
+
+ 
+{
+    "student":[
+        {"firstname":"Md", "lastname":"Anas","mobile":"8770402222","email":"anas@gmail.com" ,"address":"Khajrana"},
+        {"firstname":"Sam", "lastname":"Curran" ,"mobile":"7770455222" ,"email":"sam@gmail.com" ,"address":"VijayNager"},
+        {"firstname":"Jack", "lastname":"Pope" ,"mobile":"8770893222" ,"email":"jack@gmail.com" ,"address":"London"},
+        {"firstname":"Shubham","lastname":"Sharma","mobile":"8770404422" ,"email":"shu@gmail.com" ,"address":"Nanda Nagar"},
+        {"firstname":"Amit","lastname":"Mishra","mobile":"8770477222" ,"email":"amit@gmail.com" ,"address":"Patni Pura"},
+        {"firstname":"Mike","lastname":"Terris","mobile":"8770455222" ,"email":"mike@gmail.com" ,"address":"Sydney"},
+        {"firstname":"Dilshan","lastname":"Joe","mobile":"8779902222","email":"dilshan@gmail.com" ,"address":"Columbo"},
+        {"firstname":"Abhishek","lastname":"Rathore","mobile":"8744402222" ,"email":"abi@gmail.com","address":"Tilak nagar"},
+        {"firstname":"siddharth","lastname":"Sharma","mobile":"8700402222" ,"email":"sidds@gmail.com" ,"address":"Palasia"},
+        {"firstname":"Vishal","lastname":"Thakur","mobile":"8770444222" ,"email":"vish@gmail.com","address":"Mr-10"}
+    ]
+}

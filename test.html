@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+        margin-top: -90px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .form-group input {
+      width: 80%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: all 0.3s;
+      background: #f9f9f9;
+    }
+
+    .form-group input:focus {
+      border-color: #0072ff;
+      background: #e6f7ff;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 5px;
+      color: #999;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 12px;
+      color: #0072ff;
+    }
+
+    .form-group input[type="submit"] {
+        width: 91%;
+      background: #0072ff;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" id="name" name="name" required placeholder=" ">
+        <label for="name">Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder=" ">
+        <label for="email">Email</label>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" required placeholder=" ">
+        <label for="password">Password</label>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-wrapper {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .form-wrapper h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: calc(100% - 20px);
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #007bff;
+    }
+
+    .form-group input[type="submit"] {
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-wrapper">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+  -->

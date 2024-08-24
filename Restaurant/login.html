@@ -22,38 +22,29 @@
             <input type="email" id="email" class="field"><br><br>
             <label for="">Password</label>
             <input type="password" id="password" class="field"><br><br>
-            <input type="submit" onclick="dataLogin()">
+            <input type="submit">
         </form>
     </div>
 
     <script>
-        function dataLogin(e){
-            
-            e.preventDefault();
-            let email = document.getElementById('email').value;
-            let password= document.getElementById('password').value;
-            // console.log(email);
-            // console.log(password);
+        function dataLogin(event){
+          event.preventDefault();
+          let email = document.getElementById('email').value;
+          let password = document.getElementById('password').value;
+          console.log(email,password);
+          let data = JSON.parse(localStorage.getItem('Data'));
 
-         let data = JSON.parse(localStorage.getItem('Data'))  ;
-        //  console.log(data);
-
-         if(data.find((value)=>{
-         return value.email === email && value.password === password;
-         })){
-            
-  
-        let findData= data.filter((value)=>{
-                        return value.email == email && value.password == password
-                    })[0]
-                    localStorage.setItem('Show',findData.name);
-
-
-                    alert('login Successful')
-                    window.location.href='home.html'
-          }
+        if(data.find((value)=>{
+         return value.email === email && value.password === password
+        })){
+           alert("Login Succ");
+           window.location.href = "home.html"
         }
-      
+          
+        }
+       
+        
+        
 
     </script>
 </body>
